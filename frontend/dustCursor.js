@@ -1,3 +1,5 @@
+// https://github.com/tholman/cursor-effects
+
 function fairyDustCursor(wrapperEl, options) {
     var possibleColors = options && options.colors || ["#D61C59", "#E7D84B", "#1B8798"];
     var width = window.innerWidth;
