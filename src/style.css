@@ -3,15 +3,12 @@ body {
     margin: 25px;
 }
 
-.baby-pic {
-    display: block;
-    float: center;
-    height: 100%;
-    width: 100%;
+img {
+    max-width: 100%;
 }
 
 button {
-    width: 50%;
+    width: 25%;
 }
 
 h1 {

@@ -7,28 +7,89 @@
         <link rel="icon" href="assets/favicon.jpeg" type="image/x-icon/">
          <!-- Bootstrap CSS --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="src/style.css">
-        <style>
+        <style> /* fill with style.css overrides */
             body {
                 background-color: lavender;
             }
 
+            .column.side {
+                width: 30%;
+            }
+
+            a { color:Indigo }
+            li { color:Indigo }
+            h1 { color:Indigo }
+            h3 { color:Indigo }
+            h5 { color:Indigo }
+            p { color:Indigo }
         </style>
     </head>
     <body>
         <div id="header">
             <ul class="nav justify-content-end">
-                <li class="nav-item"><a style= "color:Indigo" href="index.html">Wait, I am Karen</a></li>
+                <li class="nav-item"></li><a href="index.html">Wait, I am Karen</a></li>
             </ul>
+            <h1>I'm not Karen... so what am I doing here?</h1>
         </div>
 
-        <div id="main" class="row">
-            <div class="column side">
-                <p>Hi I'm Maura, and I created this website </p>
-            </div>
+        <div id="main" class="row" style="padding:50px">
             <div class="column main">
-                <h1 style="color:indigo">I'm not Karen... What am I doing here?</h1>
-                <p> Instructions</p>
+                <!-- <h1>I'm not Karen... so what am I doing here?</h1> -->
+                <br>
+                <h3>One of two reasons</h3>
+                <p>
+                    It's either (a) I've summoned you to help me surprise Mum with the best birthday 
+                    quarntine has yet to experience or (b) you've somehow stumbled upon this webpage unto your own accord of internet trolling. 
+                    It doesn't matter how you've gotten here, but now that you are.... 
+                </p> 
+                <br>
+                <h3>Wish Karen a Happy Birthday!</h3>
+                <p>
+                    Mum has always been my biggest supporter, and lately I've been scratching at ways in which I can 
+                    show her my unconditional apprciation. Last year, I made a <u><a href="https://www.youtube.com/watch?v=gXGAMZREo_M&t=1s" target="_blank">short video</a></u>
+                    summarizing the highlights of her life, 
+                    but this year I want to do something even more radical. It just so happens that my next blog post is due the 
+                    day after her 63rd birthday. What better opportunity than to create this website showcasing the skills I've acquired
+                    eight-weeks into my summer program? *I'll answer that, there is none*
+                </p>
+                <ol>
+                    <h5>Instructions</h4>
+                    <li>Click to access the <u><a href="wishForm.html">birthday wish form</a></u></li>
+                    <li>Write your birthday memo</li>
+                    <li>Optional, but highly encouraged. Add a voice recording to the memo</li>
+                    <li>When you think the birthday wish is complete, double check the form. Once submited, a birthday wish cannot be edited or deleted</li>
+                    <li>Click on the "submit" button, and you're finished</li>
+                    <li>You should see your birthday greeting appear at the top of the list</li>
+                </ol>
+    
+
             </div>
+
+            <div class="column side">
+                <h3>About the Creator</h3>
+                <br>
+                    <img src="assets/maura-mum-duotone.jpg" alt="Indigo duotone picture of Karen and Maura circa 2001">
+                <br><br>
+                <p>
+                    Yuh that's me, Maura, about 20 years ago, but not much about my appearance has changed. I'm still cordinating stylish outfits with Mum, and rocking my classic expressionless face.
+                    Many of you know me well, but for those who may not, I'm Karen's daughter. </p>
+                <p> 
+                    Conicidentally, this year Mum's birthday falls right as I'm in the process of finishing my 
+                    summer course with Yale x Flatiron, where I'm learning full-stack web development in Ruby, 
+                    JavaScript, and HTML/CSS. For the course, each student blogs about their experience as a 
+                    beginner programmer and various coding queries. Check out my blog on <u><a href="https://medium.com/@maurakelly87" target="_blank">Medium</a></u>.
+                </p>
+        
+                <p>
+                    For more information or to contact me, click <u><a href="http://www.mauralian.com" target="_blank">here</a></u>.
+                </p>
+               
+            </div>
+
+            <!-- <div class="column main">
+                <h1>I'm not Karen... What am I doing here?</h1>
+                <p> Instructions</p>
+            </div> -->
         </div>
 
         <!-- Optional Bootstrap JS -->

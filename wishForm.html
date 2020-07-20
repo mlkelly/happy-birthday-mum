@@ -7,26 +7,38 @@
         <link rel="icon" href="assets/favicon.jpeg" type="image/x-icon/">
          <!-- Bootstrap CSS --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="src/style.css">
+        <style> /* fill with style.css overrides */
+            .column.main {
+                width: 80%;
+            }
+        
+        </style>
     </head>
     <body>
-        <div id="header">
-            <ul class="nav justify-content-end">
-                <li class="nav-item"><a style="color:white" href="notKaren.html">Not Karen?</a></li>
-            </ul>
-        </div>
-
-        <div id="main" class="row" style="padding:25px">
-            <div id="baby-pic" class="column side">
-                <img class="baby-pic" src="assets/baby_bitmap_b100_s200.jpg" alt="Bitmapped baby picture of Karen"> 
+        <div id="main">
+            <div id="header">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a style="color:white" href="index.html">Wait, I am Karen</a></li>
+                </ul>
+                <h1>Wish Karen a Happy Birthday!</h1>
             </div>
+    
+            <div class="row" style="padding:25px">
+               <div class="column side">
+                    <ol>
+                        <h5>Instructions:</h4>
+                        <li>Click to access the <u><a href="wishForm.html">birthday wish form</a></u></li>
+                        <li>Write your birthday memo</li>
+                        <li>Optional, but highly encouraged. Add a voice recording to the memo</li>
+                        <li>When you think the birthday wish is complete, double check the form. Once submited, a birthday wish cannot be edited or deleted</li>
+                        <li>Click on the "submit" button, and you're finished</li>
+                        <li>You should see your birthday greeting appear at the top of the list</li>
+                    </ol>
+               </div>
 
-            <div id="info" class="column main" style="margin:auto">
-                <h1 >Happy Birthday Mum!</h1>
-                <p>You're looking just as youthful as you were in this photo :) </p>
-                <br>
-                <p style ="color:red">Please, turn your volume up before continuing!</p>
-                <br>
-                <button type="button" id="enter" class="btn btn-light">ENTER</button>
+               <div class="column main">
+    
+               </div>
             </div>
         </div>
 
@@ -36,6 +48,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <!-- main file js -->
         <script src="index.min.js"></script>
-        <script src="src/index.js"></script>
+        <script src="src/wishForm.js"></script>
     </body>
 </html>
