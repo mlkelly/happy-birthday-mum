@@ -7,9 +7,7 @@ function ce(element){
 }
 
 const mainDiv = qs("div#main") 
-const newCanvas = ce("canvas")
-newCanvas.id = "my-canvas"
-mainDiv.appendChild(newCanvas)
+const canvas = qs("canvas#my-canvas")
 
 const confettiSettings = {
     target: 'my-canvas',

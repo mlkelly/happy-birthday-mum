@@ -8,38 +8,48 @@
          <!-- Bootstrap CSS --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="src/style.css">
         <style> /* fill with style.css overrides */
-            .column.main {
-                width: 80%;
+            .column.side {
+                width: 25%;
             }
         
+            a { color:white }
+            li { color:white }
+            h1 { color:white }
+            h3 { color:white }
+            h5 { color:white }
+            p { color:white }
         </style>
     </head>
     <body>
-        <div id="main">
-            <div id="header">
+        <div>
+            <div id="header" class ="box">
                 <ul class="nav justify-content-end">
                     <li class="nav-item"><a style="color:white" href="index.html">Wait, I am Karen</a></li>
                 </ul>
                 <h1>Wish Karen a Happy Birthday!</h1>
             </div>
     
-            <div class="row" style="padding:25px">
-               <div class="column side">
-                    <ol>
-                        <h5>Instructions:</h4>
-                        <li>Click to access the <u><a href="wishForm.html">birthday wish form</a></u></li>
-                        <li>Write your birthday memo</li>
-                        <li>Optional, but highly encouraged. Add a voice recording to the memo</li>
-                        <li>When you think the birthday wish is complete, double check the form. Once submited, a birthday wish cannot be edited or deleted</li>
-                        <li>Click on the "submit" button, and you're finished</li>
-                        <li>You should see your birthday greeting appear at the top of the list</li>
-                    </ol>
-               </div>
-
-               <div class="column main">
-    
-               </div>
-            </div>
+            <!-- <div>
+                <canvas id="my-canvas"> -->
+                    <div class="row" style="padding:50px">
+                        <div class="column side">
+                                <ol>
+                                    <h5>Instructions:</h4>
+                                    <li>Click to access the <u><a href="wishForm.html">birthday wish form</a></u></li>
+                                    <li>Write your birthday memo</li>
+                                    <li>Optional, but highly encouraged. Add a voice recording to the memo</li>
+                                    <li>When you think the birthday wish is complete, double check the form. Once submited, a birthday wish cannot be edited or deleted</li>
+                                    <li>Click on the "submit" button, and you're finished</li>
+                                    <li>You should see your birthday greeting appear at the top of the list</li>
+                                </ol>
+                        </div>
+        
+                        <div class="column main" id="form">
+                            <!-- create submission form here -->
+                        </div>
+                    </div>
+                <!-- </canvas>
+            </div> -->
         </div>
 
         <!-- Optional Bootstrap JS -->
@@ -51,6 +61,6 @@
             <script src="giftCursor.js"></script>
             <!-- <script src="dustCursor.js"></script> -->
         <!-- main file js -->
-        <script src="src/index.js"></script>
+        <!-- <script src="src/wishForm.js"></script> -->
     </body>
 </html>

@@ -32,8 +32,12 @@ enter.addEventListener("click", () =>{
 
     newCanvas.addEventListener("click", () => {
         confetti.clear()
+        mainDiv.innerHTML=""
         console.log("canvas has been clicked, and confetti stoped")
 
+        fetch("http://localhost:3000/api/v1/posts")
+        .then(res => res.json())
+        .then(console.log)
         // add what I want to show up once confetti is cleared here
     })
 })
