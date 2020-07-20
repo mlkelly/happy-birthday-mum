@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    margin: 25px;
+}
+
+.baby-pic {
+    display: block;
+    float: center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    width: 50%;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.column {
+    float: left;
+}
+  
+/* small, side column */
+.column.side {
+    width: 33%;
+    padding: 25px;
+}
+  
+/* main column */
+.column.main {
+    width: 66%;
+}
+  
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.main {
+        width: 100%;
+    }
+}
