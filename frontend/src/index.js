@@ -61,6 +61,7 @@ enter.addEventListener("click", () =>{
         const contentMainDiv = ce("div")
         contentMainDiv.className="content main"
         contentMainDiv.id="content-main"
+        mainDiv.append(contentMainDiv)
         
         const wishList = ce("ul")
 
@@ -76,12 +77,11 @@ enter.addEventListener("click", () =>{
         formContainer.id="form-container"
         formContainer.style.display="none"
 
+        const newWishForm = ce("form")
 
         addBtn.addEventListener("click", () => {
             formContainer.innerHTML=""
             formContainer.style="margin: 25px"
-
-            const newWishForm = ce("form")
 
             const formGroup= ce("div")
             formGroup.className="form-group"
@@ -100,7 +100,7 @@ enter.addEventListener("click", () =>{
 
             const inputDiv4 =ce("div")
             inputDiv4.className="input-group mb-3"
-            inputDiv4.innerHTML='<button type="submit" class="btn btn-light">Send Wish</button>'
+            inputDiv4.innerHTML='<button id="sub" type="submit" class="btn btn-light">Send Wish</button>'
 
             formGroup.append(inputDiv, inputDiv2, inputDiv3, inputDiv4)
             newWishForm.append(formGroup)
@@ -117,9 +117,33 @@ enter.addEventListener("click", () =>{
             }
         })
 
-        contentMainDiv.append(addBtn, formContainer, wishList)
-        contentMainDiv.style="width: 66%"
-        mainDiv.append(contentMainDiv)
+        newWishForm.addEventListener("submit", () => {
+            // debugger
+            event.preventDefault()
+
+            let configObj = {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type":"appliction/json",
+                    // "Access-Control-Allow-Origin":  "http://127.0.0.1:3000",
+                    // "Access-Control-Allow-Methods": "POST",
+                    // "Access-Control-Allow-Headers": "Content-Type, Authorization"
+                },
+                body: JSON.stringify({
+                    name: newWishForm[0].value,
+                    message: newWishForm[1].value,
+                    img: newWishForm[3].value
+                })
+            }
+
+            fetch("http://localhost:3000/api/v1/posts", configObj)
+            // .then(res => res.json())
+            .then(post => {
+                addWish(post)
+                newWishForm.reset()
+            })
+        })
         
         // fetch posts
         function fetchPosts(){
@@ -167,6 +191,8 @@ enter.addEventListener("click", () =>{
             wishList.append(li)
         }
 
+        contentMainDiv.append(addBtn, formContainer, wishList)
+        contentMainDiv.style="width: 66%"
         fetchPosts()
         
     })

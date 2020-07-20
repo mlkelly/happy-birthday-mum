@@ -982,3 +982,412 @@ Processing by Api::V1::PostsController#index as */*
 Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1121)
 
 
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Destroy (1.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("name", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Fuzz"], ["message", "Happy Birthday Mum! Love you lots!!!"], ["created_at", "2020-07-20 19:42:40.023674"], ["updated_at", "2020-07-20 19:42:40.023674"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("name", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Anon"], ["message", "Have a fantastic birthday karen!"], ["created_at", "2020-07-20 19:42:40.037647"], ["updated_at", "2020-07-20 19:42:40.037647"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 16:23:04 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 0.8ms | Allocations: 6704)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 16:23:28 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1137)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 16:27:11 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1136)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 16:27:33 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1136)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 16:29:07 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1136)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 16:31:24 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.7ms | Allocations: 6382)
+
+
+Started POST "/api/v1/posts" for ::1 at 2020-07-20 16:40:42 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PostsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 133)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=created-at" for ::1 at 2020-07-20 16:41:49 -0400
+Processing by Api::V1::PostsController#index as HTML
+  Parameters: {"sort"=>"created-at"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1142)
+
+
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 16:42:12 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:35:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:39:14 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:41:43 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:41:48 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=created-at" for ::1 at 2020-07-20 17:42:27 -0400
+Processing by Api::V1::PostsController#index as HTML
+  Parameters: {"sort"=>"created-at"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1141)
+
+
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:42:34 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:51:57 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1143)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:52:56 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1121)
+
+
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:53:02 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:53:34 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1120)
+
+
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:53:40 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:53:58 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1120)
+
+
+Started POST "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:54:04 -0400
+Processing by Api::V1::PostsController#create as */*
+  Parameters: {"sort"=>"-created-at"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 17:55:42 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1120)
+
+
+Started POST "/api/v1/posts" for ::1 at 2020-07-20 17:55:47 -0400
+Processing by Api::V1::PostsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:14:39 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1143)
+
+
+Started POST "/api/v1/posts" for ::1 at 2020-07-20 18:14:45 -0400
+Processing by Api::V1::PostsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:19:58 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1120)
+
+
+Started POST "/api/v1/posts" for ::1 at 2020-07-20 18:20:03 -0400
+Processing by Api::V1::PostsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:21:43 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1120)
+
+
+Started POST "/api/v1/posts" for ::1 at 2020-07-20 18:21:53 -0400
+Processing by Api::V1::PostsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:23:40 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1120)
+
+
+Started POST "/api/v1/posts" for ::1 at 2020-07-20 18:23:48 -0400
+Processing by Api::V1::PostsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/api/v1/posts_controller.rb:16:in `post_params'
+app/controllers/api/v1/posts_controller.rb:9:in `create'
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:28:11 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1120)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:29:06 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1121)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:31:11 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1121)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:32:48 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1121)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:34:23 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1121)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:41:56 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1143)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:42:36 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1121)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:42:50 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1121)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:43:00 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1121)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:43:13 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1121)
+
+
+Started GET "/api/v1/posts?sort=-created-at" for ::1 at 2020-07-20 18:48:19 -0400
+Processing by Api::V1::PostsController#index as */*
+  Parameters: {"sort"=>"-created-at"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/api/v1/posts_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1121)
+
+

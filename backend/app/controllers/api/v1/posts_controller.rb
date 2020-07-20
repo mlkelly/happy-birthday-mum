@@ -15,6 +15,4 @@ class Api::V1::PostsController < ApplicationController
     def post_params
         params.require(:post).permit(:name, :message, :img, :audio)
     end
-
-
 end
